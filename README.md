@@ -1,5 +1,7 @@
 # Traveling Wav (A library to load or create wav file)
 
+[![Build Status](https://dev.azure.com/capra314cabra/TravelingWav/_apis/build/status/capra314cabra.traveling-wav?branchName=master)](https://dev.azure.com/capra314cabra/TravelingWav/_build/latest?definitionId=1&branchName=master)  
+
 Using this library, you can quickly write code to create simple wav file(*.wav).
 
 ## Description
