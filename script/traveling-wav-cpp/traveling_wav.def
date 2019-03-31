@@ -1,0 +1,32 @@
+LIBRARY traveling_wav
+
+VERSION 1.0
+ 
+DESCRIPTION "You can write code to create a wavefile quickly"
+ 
+ EXPORTS
+	;
+	;tvgw_fileload.h
+	;
+	tvgw_LoadFile @1
+	tvgw_LoadFileChunk @2
+
+	;
+	;tvgw_filewrite.h
+	;
+	tvgw_WriteFile @3
+	tvgw_WriteFileChunk @4
+
+	;
+	;tvgw_dispose.h
+	;
+	tvgw_Dispose @5
+
+	;
+	;tvgw_converter.h
+	;
+	tvgw_ConvertToFormatChunk @6
+	tvgw_ConvertToDataChunk @7
+	tvgw_GetAsFormatContents @8
+	tvgw_ConvertToRIFF @9
+	tvgw_ConvertToWav @10

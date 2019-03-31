@@ -1,0 +1,19 @@
+# Build result
+
+/bin/
+
+# Tester
+
+tester/
+
+# Objects folder
+
+/obj/
+
+# VS Code
+
+.vscode/
+
+# Working Space
+
+working-space/
