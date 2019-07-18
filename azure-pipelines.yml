@@ -6,10 +6,34 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'Ubuntu-16.04'
-
-steps:
-- script: mkdir ../../bin/ & make
-  displayName: 'make'
-  workingDirectory: 'script/traveling-wav-cpp'
+jobs:
+- job: Linux
+  pool:
+    vmImage: "ubuntu-16.04"
+  steps:
+  - script: |
+      mkdir build
+      pushd build > /dev/null
+      cmake .. -G "Unix Makefiles"
+      popd > /dev/null
+    displayName: "Run CMake"
+  - script: |
+      pushd build > /dev/null
+      make
+      popd > /dev/null
+    displayName: "Run Makefiles"
+- job: Windows
+  pool:
+    vmImage: "vs2017-win2016"
+  steps:
+  - script: |
+      mkdir build
+      cd build
+      cmake .. -G "Visual Studio 15 2017"
+      cd ../
+    displayName: "Run CMake"
+  - task: MSBuild@1
+    inputs:
+      solution: "**/*.sln"
+      configuration: "debug"
+    displayName: "Build C++ files"

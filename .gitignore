@@ -1,19 +1,11 @@
 # Build result
 
-/bin/
-
-# Tester
-
-tester/
-
-# Objects folder
-
-/obj/
+/build
 
 # VS Code
 
-.vscode/
+/.vscode
 
 # Working Space
 
-working-space/
+/working-space
