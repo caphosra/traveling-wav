@@ -2,7 +2,7 @@
 #include<fstream>
 #include<iostream>
 
-#include"../header/tvgw_fileload.h"
+#include"tvgw_fileload.h"
 
 extern "C" int tvgw_LoadFile(const char* filename, TVGW_RIFF_File* filedata){
     std::ifstream fin(filename, std::ios::binary);
