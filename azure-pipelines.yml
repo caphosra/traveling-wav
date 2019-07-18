@@ -11,9 +11,11 @@ jobs:
   pool:
     vmImage: "ubuntu-16.04"
   steps:
-  - task: CMake@1
-    inputs:
-      cmakeArgs: -G "Unix Makefiles"
+  - script: |
+      mkdir build
+      pushd build > /dev/null
+      cmake .. -G "Unix Makefiles"
+      popd > /dev/null
     displayName: "Run CMake"
   - script: |
       pushd build > /dev/null
@@ -24,9 +26,11 @@ jobs:
   pool:
     vmImage: "windows-2019"
   steps:
-  - task: CMake@1
-    inputs:
-      cmakeArgs: -G "Visual Studio 15 2017"
+  - script: |
+      mkdir build
+      cd build
+      cmake .. -G "Visual Studio 15 2017"
+      cd ../
     displayName: "Run CMake"
   - task: MSBuild@1
     inputs:
