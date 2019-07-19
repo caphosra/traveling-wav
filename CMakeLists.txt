@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.12.0)
 
 project(traveling-wav)
 enable_language(CXX)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_CONFIGURATION_TYPES Debug Release)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_BINARY_DIR}/Debug")
