@@ -1,4 +1,4 @@
-#include"tvgw/all.h"
+#include"tvgw/converter.h"
 
 extern "C" void tvgw_ConvertToFormatChunk(TVGW_File_Chunk* chunk, TVGW_Format_Contents* fmt){
     // fmt[space]

@@ -1,7 +1,7 @@
 #include<vector>
 #include<fstream>
 
-#include"tvgw/all.h"
+#include"tvgw/filewrite.h"
 
 extern "C" int tvgw_WriteFile(const char* filename, TVGW_RIFF_File* filedata){
     std::ofstream fout(filename, std::ios::binary);

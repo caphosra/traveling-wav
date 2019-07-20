@@ -1,6 +1,7 @@
 #pragma once
 
-#include"tvgw/filedata.h"
+#include"tvgw/constant.h"
+#include"tvgw/structs.h"
 
 #include<fstream>
 

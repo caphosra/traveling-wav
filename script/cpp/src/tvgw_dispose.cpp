@@ -1,4 +1,4 @@
-#include"tvgw/all.h"
+#include"tvgw/dispose.h"
 
 extern "C" void tvgw_Dispose(TVGW_RIFF_File* filedata){
     int chunkCount = filedata->chunkCount;

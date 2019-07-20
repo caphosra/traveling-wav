@@ -1,6 +1,7 @@
 #pragma once
 
-#include"tvgw/filedata.h"
+#include"tvgw/constant.h"
+#include"tvgw/structs.h"
 
 //
 // Free the memories which have been alocated by TVGW_RIFF_FILE
