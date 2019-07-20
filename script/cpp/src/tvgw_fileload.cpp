@@ -55,7 +55,7 @@ extern "C" int tvgw_LoadFileChunk(std::ifstream* fin, TVGW_File_Chunk* chunk){
         return -1;
     }
     else{
-        for(int i = 0; i < chunk->chunkSize; i++){
+        for(unsigned int i = 0; i < chunk->chunkSize; i++){
             fin->read(chunk->data + i, sizeof(char));
         }
     }
