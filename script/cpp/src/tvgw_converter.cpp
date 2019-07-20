@@ -27,7 +27,7 @@ extern "C" TVGW_RIFF_File* tvgw_ConvertToRIFF(unsigned int fileType, unsigned in
     // Counted the word "WAVE"
     int fileSize = sizeof(unsigned int);
 
-    for(int counter = 0; counter < chunkCount; counter++){
+    for(unsigned int counter = 0; counter < chunkCount; counter++){
         fileSize += (sizeof(unsigned int) * 2 + chunks[counter]->chunkSize);
     }
 

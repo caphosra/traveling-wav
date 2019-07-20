@@ -8,7 +8,7 @@ extern "C" int tvgw_WriteFile(const char* filename, TVGW_RIFF_File* filedata){
 
     fout.write((char*)filedata, sizeof(unsigned int) * 3);
 
-    for(int counter = 0; counter < filedata->chunkCount; counter++){
+    for(unsigned int counter = 0; counter < filedata->chunkCount; counter++){
         tvgw_WriteFileChunk(&fout, filedata->chunks[counter]);
     }
 
