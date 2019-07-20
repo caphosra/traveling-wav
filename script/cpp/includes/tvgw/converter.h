@@ -1,3 +1,5 @@
+#pragma once
+
 #include"tvgw/filedata.h"
 
 //
