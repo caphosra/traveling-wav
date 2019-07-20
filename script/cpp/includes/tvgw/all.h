@@ -4,18 +4,18 @@
 #define TVGW_FMT 0x20746D66
 #define TVGW_DATA 0x61746164
 
-#include"tvgw_filedata.h"
+#include"tvgw/filedata.h"
 
 #if !TVGW_WITHOUT_FILE_LOAD
-#include"tvgw_fileload.h"
+#include"tvgw/fileload.h"
 #endif
 
 #if !TVGW_WITHOUT_FILE_WRITE
-#include"tvgw_filewrite.h"
+#include"tvgw/filewrite.h"
 #endif
 
 #if !TVGW_WITHOUT_CONVERTER
-#include"tvgw_converter.h"
+#include"tvgw/converter.h"
 #endif
 
-#include"tvgw_dispose.h"
+#include"tvgw/dispose.h"
