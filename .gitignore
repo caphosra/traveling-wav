@@ -9,3 +9,8 @@
 # Working Space
 
 /working-space
+
+# CSharp
+
+**/bin/
+**/obj/
