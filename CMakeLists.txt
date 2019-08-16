@@ -13,8 +13,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/Release")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/Release")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/Release")
 
-file(GLOB TVGW_SRC "script/cpp/src/*.cpp" )
-file(GLOB TVGW_HEADER "script/cpp/includes")
+file(GLOB TVGW_SRC "src/Native/src/*.cpp" )
+file(GLOB TVGW_HEADER "src/Native/includes")
 
 message(STATUS "TVGW_SRC VAL is ${TVGW_SRC}")
 message(STATUS "TVGW_HEADER VAL is ${TVGW_HEADER}")
@@ -27,7 +27,7 @@ add_library(tvgw_static STATIC ${TVGW_SRC})
 if(MSVC)
     set_target_properties(tvgw
         PROPERTIES
-            OUTPUT_NAME "travelingwav"
+            OUTPUT_NAME "tvgw"
             SUFFIX ".dll"
         )
     set_target_properties(tvgw_static
@@ -39,7 +39,7 @@ else()
     set_target_properties(tvgw
         PROPERTIES 
             PREFIX "lib"
-            OUTPUT_NAME "travelingwav"
+            OUTPUT_NAME "tvgw"
             SUFFIX ".so"
         )
     set_target_properties(tvgw_static
