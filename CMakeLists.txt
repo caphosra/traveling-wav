@@ -21,6 +21,10 @@ message(STATUS "TVGW_HEADER VAL is ${TVGW_HEADER}")
 
 include_directories(${TVGW_HEADER})
 
+if(MSVC)
+    add_definitions(/DTVGW_DLL_EXPORT)
+endif()
+
 add_library(tvgw SHARED ${TVGW_SRC})
 add_library(tvgw_static STATIC ${TVGW_SRC})
 
