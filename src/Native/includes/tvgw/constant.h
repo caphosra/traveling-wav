@@ -4,10 +4,10 @@
 #define TVGW_FMT 0x20746D66
 #define TVGW_DATA 0x61746164
 
-#ifdef TVGW_DLL_EXPORT
+#if defined(TVGW_DLL_EXPORT)
 #   define TVGW_API extern "C" __declspec(dllexport)
 #elif defined(TVGW_DLL_IMPORT)
 #   define TVGW_API extern "C" __declspec(dllimport)
 #else
-#   define TVGW_API
+#   define TVGW_API extern "C"
 #endif
